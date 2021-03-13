@@ -1,0 +1,40 @@
+.breadcrum-div {
+  margin: 50px auto;
+  margin-left: 30px;
+
+  .breadcrum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    width: 25vw;
+  }
+  .list-name {
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .home {
+    color: black;
+  }
+  .grey-text {
+    font-family: "Lato";
+    color: rgb(87, 79, 79);
+    font-weight: bold;
+  }
+  .black-text {
+    font-family: "Lato";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  .caret {
+    color: yellow;
+    font-size: 20px;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+}
