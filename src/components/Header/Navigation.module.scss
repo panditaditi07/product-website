@@ -4,7 +4,6 @@ $background-color: linear-gradient(180deg, #fff06b, #fff06b);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 60px;
   padding: 10px;
   background-color: white;
 
@@ -42,18 +41,23 @@ $background-color: linear-gradient(180deg, #fff06b, #fff06b);
   .logo {
     color: black;
   }
-  .cart-count {
-    position: absolute;
-    border-radius: 50%;
-    left: 80%;
-    top: -90%;
-    font-size: 13px;
-    background: yellow;
-    height: 21px;
-    width: 21px;
-    padding: 3px;
-  }
-  .bag {
+  .bag-link {
     position: relative;
+    .cart-count {
+      font-family: "Lato";
+      font-style: italic;
+      position: absolute;
+      border-radius: 50%;
+      right: -15px;
+      top: -12px;
+      font-size: 12px;
+      background: yellow;
+      height: 21px;
+      width: 21px;
+
+      text-align: center;
+      line-height: 21px;
+      z-index: 1;
+    }
   }
 }

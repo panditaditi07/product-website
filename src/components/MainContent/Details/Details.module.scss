@@ -1,0 +1,22 @@
+.details-section {
+  background-color: white;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width: 90%;
+    top: 0;
+    right: 0;
+  }
+  .sofa {
+    width: 50%;
+    height: 50%;
+    img {
+      width: 100%;
+    }
+  }
+}

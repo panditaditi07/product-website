@@ -1,0 +1,27 @@
+.side-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+  list-style: none;
+  .list-link {
+    margin: 20px;
+  }
+  .link {
+    text-decoration: none;
+    // font-family: "Lato";
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+  }
+  .style-icon {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .icons {
+    font-size: 20px;
+  }
+}

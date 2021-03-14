@@ -1,6 +1,5 @@
 .breadcrum-div {
   margin: 50px auto;
-  margin-left: 30px;
 
   .breadcrum {
     display: flex;
@@ -35,6 +34,15 @@
 .main-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 80vw;
+  justify-content: space-between;
+  width: 100%;
+  // border: 3px solid red;
+  .content-div {
+    width: 100%;
+  }
+  // .details-section {
+  // background-color: white;
+  // position: relative;
+  // width: 90%;
+  // }
 }

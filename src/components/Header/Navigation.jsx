@@ -44,16 +44,13 @@ const Navigation = () => {
               <i className={`far fa-heart ${style["icon-link"]}`}></i>
             </a>
           </li>
-          <li>
-            <a href="/#">
-              <i
-                className={`gg-shopping-bag ${style["icon-link"]} ${style["bag"]}`}
-              >
-                <span className={style["cart-count"]}>
-                  <span>0</span>
-                </span>
-              </i>
-            </a>
+          <li className={style["bag-link"]}>
+            <div className={style["cart-count"]}>
+              <span>1</span>
+            </div>
+            <i
+              className={`gg-shopping-bag ${style["icon-link"]} ${style["bag"]}`}
+            ></i>
           </li>
         </div>
       </ul>
