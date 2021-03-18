@@ -6,14 +6,16 @@
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    width: 25vw;
+    width: 22vw;
   }
+
   .list-name {
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
   }
   .home {
     color: black;
+    font-size: 15px;
   }
   .grey-text {
     font-family: "Lato";
@@ -37,7 +39,10 @@
   justify-content: space-between;
   width: 100%;
 
+  .side-section {
+    width: 25%;
+  }
   .content-div {
-    width: 100%;
+    width: 75%;
   }
 }

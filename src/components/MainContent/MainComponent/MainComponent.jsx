@@ -3,7 +3,7 @@ import style from "./MainComponent.module.scss";
 // import HorizontalSection from "../HorizontalSection/HorizontalSection";
 import SideSection from "../SideSection/SideSection";
 import Details from "../Details/Details";
-// import Description from "../Description/Description";
+import Description from "../Description/Description";
 // import Reviews from "../Reviews/Reviews";
 // import Related from "../Related/Related";
 const MainComponent = () => {
@@ -13,7 +13,7 @@ const MainComponent = () => {
         <ul className={style["breadcrum"]}>
           <li>
             <a href="/#">
-              <i class={`gg-home ${style["home"]}`}></i>
+              <i class={`fas fa-home ${style["home"]}`}></i>
             </a>
           </li>
           <li>
@@ -60,16 +60,18 @@ const MainComponent = () => {
       <br />
       <div className={style["main-container"]}>
         {/* <HorizontalSection /> */}
-
-        <SideSection />
+        <div className={style["side-section"]}>
+          <SideSection />
+        </div>
 
         <div className={style["content-div"]}>
           <div className={style["details-section"]}>
             <Details />
           </div>
-
-          {/* <Description />
-          <Reviews />
+          <div>
+            <Description />
+          </div>
+          {/* <Reviews />
           <Related /> */}
         </div>
       </div>
