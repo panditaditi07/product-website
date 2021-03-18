@@ -5,8 +5,8 @@
 
   position: relative;
   width: 100%;
-  height: 87vh;
-  margin-bottom: 100px;
+  height: 90vh;
+  margin-bottom: 150px;
   .details-container {
     width: 95%;
     background-color: white;
@@ -18,11 +18,11 @@
       position: absolute;
       top: 50px;
       left: -50px;
-      width: 50%;
+      width: 53%;
 
       img {
         width: 100%;
-        height: 72vh;
+        height: 75vh;
       }
     }
     .details-content {
@@ -42,7 +42,7 @@
     .stars {
       padding-top: 10px;
       .checked-icon {
-        color: #ffed48;
+        color: #fcdc4d;
         font-size: 15px;
       }
       .unchecked-icon {
@@ -203,7 +203,7 @@
       }
       .addtocart {
         padding: 10px 60px;
-        background-color: #ffed48;
+        background-color: #fcdc4d;
         font-size: 13px;
         color: white;
         font-weight: 900;

@@ -4,7 +4,7 @@ import style from "./MainComponent.module.scss";
 import SideSection from "../SideSection/SideSection";
 import Details from "../Details/Details";
 import Description from "../Description/Description";
-// import Reviews from "../Reviews/Reviews";
+import Reviews from "../Reviews/Reviews";
 // import Related from "../Related/Related";
 const MainComponent = () => {
   return (
@@ -71,8 +71,10 @@ const MainComponent = () => {
           <div>
             <Description />
           </div>
-          {/* <Reviews />
-          <Related /> */}
+          <div>
+            <Reviews />
+          </div>
+          {/* <Related />  */}
         </div>
       </div>
     </>

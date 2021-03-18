@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import style from "./Description.module.scss";
 import couch from "../../assets/descriptionSofa4.jpg";
 import video from "../../assets/sofaVideo.mp4";
+import couch1 from "../../assets/descSofa7.jpg";
+import couch2 from "../../assets/descSofa6.jpg";
+
 const Description = () => {
+  const vidRef = useRef(null);
+
+  const handlePlayVideo = (event) => {
+    // event.preventDefault();
+    // if (vidRef.current.play()) {
+    //   console.log(event.target);
+    //   event.target.classList.remove("play-button");
+    // }
+    if (document.getElementById("play").classList.contains("play-button")) {
+      document.getElementById("play").classList.remove("play-button");
+      vidRef.current.play();
+    } else {
+      event.target.classList.add("play-button");
+    }
+  };
+
   return (
     <>
       <div className={style["desc-container"]}>
@@ -34,17 +53,48 @@ const Description = () => {
       </div>
 
       <div className={style["desc-container-2"]}>
-        <div className={style["video-div"]}>
-          <video src={video} className={style["video"]} />
+        <div className={style["video-div"]} id="video-div">
+          <video
+            ref={vidRef}
+            src={video}
+            className={style["video"]}
+            type="video/mp4"
+          />
         </div>
         <div className={style["opacity"]}></div>
-        <div className={style["play-button"]}>
+        <div
+          className={style["play-button"]}
+          id="play"
+          onClick={(event) => {
+            handlePlayVideo(event);
+          }}
+        >
           <i class={`fas fa-play ${style["play-circle"]}`}></i>
         </div>
         <div className={style["desc-heading-div"]}>
           <h2 className={style["desc-heading"]}>
             At vero eos et accusamus et iusto odio dignissimos.
           </h2>
+        </div>
+      </div>
+
+      <div div className={style["desc-container-3"]}>
+        <div className={style["desc-3"]}>
+          <div className={style["image-div"]}>
+            <img src={couch1} alt="" />
+          </div>
+          <div className={style["image2-div"]}>
+            <img src={couch2} alt="" />
+          </div>
+          <div className={style["download-div"]}>
+            <a href="/#" className={style["download"]}>
+              <i
+                className={`far fa-arrow-alt-circle-down ${style["circle-down"]}`}
+              ></i>
+              <span className={style["download-pdf"]}>DOWNLOAD PDF</span>
+            </a>
+          </div>
+          <span className={style["accomodation"]}>SUGGESTED ACCOMODATION</span>
         </div>
       </div>
     </>
