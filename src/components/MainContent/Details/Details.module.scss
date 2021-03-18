@@ -1,22 +1,207 @@
 .details-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
   position: relative;
   width: 100%;
-  height: 60vh;
-  .details {
+  height: 90vh;
+  margin-bottom: 70px;
+  .sofa {
+    position: absolute;
+    top: 50px;
+    left: -70px;
+    width: 57%;
+
+    img {
+      width: 100%;
+      height: 72vh;
+    }
+  }
+  .details-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    padding: 40px;
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .details-content h2 {
+    padding-right: 100px;
+    font-weight: 900;
+  }
+  .stars {
+    padding-top: 10px;
+    .checked-icon {
+      color: #ffed48;
+      font-size: 15px;
+    }
+    .unchecked-icon {
+      color: rgb(240, 234, 234);
+      font-size: 15px;
+    }
+    .star-likes {
+      padding: 10px;
+      color: gray;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+    }
+  }
+  .prices {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .price-1 {
+      font-family: "Lato";
+      font-weight: 400;
+      color: rgb(192, 192, 192);
+      text-decoration: line-through;
+    }
+    .price-2 {
+      font-family: "Lato";
+      font-weight: 700;
+      padding: 10px;
+    }
+  }
+  .assembly-div {
+    padding: 20px;
+    border-top: 1px solid rgb(214, 212, 212);
+    border-bottom: 1px solid rgb(214, 212, 212);
+
+    .list-assembly {
+      font-size: 12px;
+      font-family: "Lato";
+      padding: 10px;
+      letter-spacing: 1px;
+    }
+    .warranty-assembly {
+      font-size: 12px;
+      font-family: "Lato";
+      padding: 10px;
+      letter-spacing: 1px;
+    }
+    .carpentary {
+      font-size: 12px;
+      font-family: "Lato";
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .months {
+      font-size: 12px;
+      font-family: "Lato";
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+  }
+  .rp-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: absolute;
-    width: 90%;
-    top: 0;
-    right: 0;
+    padding-top: 20px;
+    width: 270px;
+
+    .dispatch {
+      width: 80px;
+      font-size: 10px;
+      padding: 5px;
+      font-weight: 900;
+    }
+    .rp {
+      width: 100px;
+      font-size: 10px;
+      padding: 5px;
+      font-weight: 900;
+    }
+    .car {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: rgb(240, 234, 234);
+      border-radius: 50%;
+    }
+    .undo {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: rgb(240, 234, 234);
+      border-radius: 50%;
+    }
   }
-  .sofa {
-    width: 50%;
-    height: 50%;
-    img {
-      width: 100%;
+  .select-color {
+    padding-top: 20px;
+    .color {
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .colors-div {
+      width: 90px;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      .brown {
+        width: 25px;
+        height: 25px;
+        background-color: #7969055d;
+        border-radius: 50%;
+      }
+      .black {
+        width: 25px;
+        height: 25px;
+        background-color: black;
+        border-radius: 50%;
+      }
+      .green {
+        width: 25px;
+        height: 25px;
+        background-color: rgb(0, 119, 128);
+        border-radius: 50%;
+      }
+      .check {
+        color: white;
+        padding-left: 6px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .addtocart-div {
+    padding-top: 30px;
+    width: 300px;
+
+    .inc {
+      padding: 10px;
+      background-color: rgb(240, 234, 234);
+      font-size: 13px;
+      cursor: pointer;
+      color: rgb(122, 122, 122);
+    }
+    .counter {
+      padding: 10px;
+      background-color: rgb(240, 234, 234);
+      font-size: 13px;
+    }
+    .dec {
+      padding: 10px;
+      background-color: rgb(240, 234, 234);
+      font-size: 13px;
+      cursor: pointer;
+      color: rgb(122, 122, 122);
+    }
+    .addtocart {
+      padding: 10px 60px;
+      background-color: #ffed48;
+      font-size: 13px;
+      color: white;
+      font-weight: 900;
+      font-family: "Montserrat", sans-serif;
+      cursor: pointer;
     }
   }
 }

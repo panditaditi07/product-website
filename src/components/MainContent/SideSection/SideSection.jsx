@@ -3,6 +3,7 @@ import style from "./SideSection.module.scss";
 const SideSection = () => {
   return (
     <div>
+      <div>Details</div>
       <ul className={style["side-content"]}>
         <li className={style["list-link"]}>
           <a href="/#" className={`${style["link"]}`}>

@@ -1,11 +1,11 @@
 import React from "react";
 import style from "./MainComponent.module.scss";
-import HorizontalSection from "../HorizontalSection/HorizontalSection";
+// import HorizontalSection from "../HorizontalSection/HorizontalSection";
 import SideSection from "../SideSection/SideSection";
 import Details from "../Details/Details";
-import Description from "../Description/Description";
-import Reviews from "../Reviews/Reviews";
-import Related from "../Related/Related";
+// import Description from "../Description/Description";
+// import Reviews from "../Reviews/Reviews";
+// import Related from "../Related/Related";
 const MainComponent = () => {
   return (
     <>
@@ -59,10 +59,10 @@ const MainComponent = () => {
       </div>
       <br />
       <div className={style["main-container"]}>
-        <HorizontalSection />
-        <div>
-          <SideSection />
-        </div>
+        {/* <HorizontalSection /> */}
+
+        <SideSection />
+
         <div className={style["content-div"]}>
           <div className={style["details-section"]}>
             <Details />
