@@ -69,6 +69,7 @@ const Reviews = () => {
                 voluptatem pariatur cum id modi soluta in aut, voluptatibus at
                 optio quisquam incidunt dolore perferendis autem!
               </p>
+              <p className={style["bold-text"]}>Add Comment</p>
             </div>
           </div>
           <div className={style["comments-div"]}>
@@ -107,8 +108,10 @@ const Reviews = () => {
                 maxime reiciendis repudiandae similique sit necessitatibus
                 asperiores dolorem.
               </p>
+              <p className={style["bold-text"]}>Add Comment</p>
             </div>
           </div>
+          <p className={style["load"]}>Load more(21)</p>
         </div>
       </div>
     </>

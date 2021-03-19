@@ -5,7 +5,7 @@ import SideSection from "../SideSection/SideSection";
 import Details from "../Details/Details";
 import Description from "../Description/Description";
 import Reviews from "../Reviews/Reviews";
-// import Related from "../Related/Related";
+import Related from "../Related/Related";
 const MainComponent = () => {
   return (
     <>
@@ -59,7 +59,6 @@ const MainComponent = () => {
       </div>
       <br />
       <div className={style["main-container"]}>
-        {/* <HorizontalSection /> */}
         <div className={style["side-section"]}>
           <SideSection />
         </div>
@@ -74,7 +73,9 @@ const MainComponent = () => {
           <div>
             <Reviews />
           </div>
-          {/* <Related />  */}
+          <div>
+            <Related />
+          </div>
         </div>
       </div>
     </>
