@@ -1,4 +1,5 @@
 .side-content {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,11 +9,15 @@
   list-style: none;
   width: 100%;
 
+  // overflow: auto;
+
   .list-link {
     margin: 20px;
   }
   .link {
     text-decoration: none;
+
+    // left: 12%;
 
     // font-family: "Montserrat", sans-serif;
     color: black;
@@ -24,6 +29,9 @@
     width: 100px;
     display: flex;
     justify-content: space-between;
+    // position: fixed;
+    // left: 9%;
+    // bottom: 5%;
   }
   .icons {
     font-size: 20px;

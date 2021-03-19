@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./Related.module.scss";
 import yellowlamp from "../../assets/yellowlamp.jpeg";
-import purplechair from "../../assets/purplechair1.jpg";
-import blackpendant from "../../assets/blackpendant2.jpeg";
+import purplelamp from "../../assets/purplelamp1.jpg";
+import blackpendant from "../../assets/blackpendant4.jpeg";
 import drawer from "../../assets/drawer.jpg";
 import whitependant from "../../assets/whitependant.jpeg";
 import heartchair from "../../assets/heartchair.jpg";
@@ -22,7 +22,7 @@ const Related = () => {
           <span className={style["bold-txt"]}>$149</span>
         </div>
         <div className={style["image-div"]}>
-          <img src={purplechair} alt="" className={style["images"]} />
+          <img src={purplelamp} alt="" className={style["images"]} />
           <p className={style["heading"]}>Bamboo fiber gobo</p>
           <span className={style["strikethrough"]}>$169</span>
           <span className={style["bold-txt"]}>$149</span>

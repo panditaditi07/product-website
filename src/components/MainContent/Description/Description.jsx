@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import style from "./Description.module.scss";
 import couch from "../../assets/descriptionSofa4.jpg";
 import video from "../../assets/sofaVideo.mp4";
@@ -6,20 +6,15 @@ import couch1 from "../../assets/descSofa7.jpg";
 import couch2 from "../../assets/descSofa6.jpg";
 
 const Description = () => {
+  const [isVideoPlayed, setisVideoPlayed] = useState(false);
   const vidRef = useRef(null);
-
-  const handlePlayVideo = (event) => {
-    // event.preventDefault();
-    // if (vidRef.current.play()) {
-    //   console.log(event.target);
-    //   event.target.classList.remove("play-button");
-    // }
-    if (document.getElementById("play").classList.contains("play-button")) {
-      document.getElementById("play").classList.remove("play-button");
-      vidRef.current.play();
-    } else {
-      event.target.classList.add("play-button");
-    }
+  const playVideo = () => {
+    vidRef.current.play();
+    setisVideoPlayed(!isVideoPlayed);
+  };
+  const pauseVideo = () => {
+    vidRef.current.pause();
+    setisVideoPlayed(!isVideoPlayed);
   };
 
   return (
@@ -53,7 +48,10 @@ const Description = () => {
       </div>
 
       <div className={style["desc-container-2"]}>
-        <div className={style["video-div"]} id="video-div">
+        <div
+          className={style["video-div"]}
+          onClick={() => (isVideoPlayed ? pauseVideo() : playVideo())}
+        >
           <video
             ref={vidRef}
             src={video}
@@ -61,12 +59,14 @@ const Description = () => {
             type="video/mp4"
           />
         </div>
-        <div className={style["opacity"]}></div>
+        <div className={`${!isVideoPlayed ? style["opacity"] : ""}`}></div>
         <div
-          className={style["play-button"]}
+          className={`${
+            !isVideoPlayed ? style["play-button"] : style["display-none"]
+          }`}
           id="play"
-          onClick={(event) => {
-            handlePlayVideo(event);
+          onClick={() => {
+            playVideo();
           }}
         >
           <i class={`fas fa-play ${style["play-circle"]}`}></i>

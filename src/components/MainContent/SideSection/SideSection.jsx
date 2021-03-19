@@ -31,6 +31,7 @@ const SideSection = () => {
           <i className={`fab fa-pinterest ${style["icons"]}`}></i>
         </li>
       </ul>
+      <div>Details</div>
     </div>
   );
 };
