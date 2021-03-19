@@ -3,7 +3,7 @@ import style from "./Footer.module.scss";
 import logo from "../assets/shopping-cart.png";
 const Footer = () => {
   return (
-    <div>
+    <div className={style["footer-div"]}>
       <div className={style["footer"]}>
         <div className={style["heading-div"]}>
           <p className={style["footer-heading"]}>Grab Our Newsletter</p>

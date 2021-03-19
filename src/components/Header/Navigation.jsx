@@ -3,7 +3,7 @@ import style from "./Navigation.module.scss";
 import logo from "../assets/shopping-cart.png";
 const Navigation = () => {
   return (
-    <div>
+    <div className={style["header"]}>
       <ul className={style["navigation"]}>
         <div className={style["logo"]}>
           <img src={logo} width="70px" height="70px" alt="logo" />

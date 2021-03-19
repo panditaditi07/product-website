@@ -9,72 +9,76 @@ import Related from "../Related/Related";
 const MainComponent = () => {
   return (
     <>
-      <div className={style["breadcrum-div"]}>
-        <ul className={style["breadcrum"]}>
-          <li>
-            <a href="/#">
-              <i class={`fas fa-home ${style["home"]}`}></i>
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <i className={`fas fa-caret-right ${style["caret"]}`}></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="/#"
-              className={`${style["list-name"]} ${style["grey-text"]}`}
-            >
-              CATLOG
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <i className={`fas fa-caret-right ${style["caret"]}`}></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="/#"
-              className={`${style["list-name"]} ${style["grey-text"]}`}
-            >
-              SOFAS
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <i className={`fas fa-caret-right ${style["caret"]}`}></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="/#"
-              className={`${style["list-name"]} ${style["black-text"]}`}
-            >
-              BEIGE NUDIE SOFA
-            </a>
-          </li>
-        </ul>
-      </div>
-      <br />
       <div className={style["main-container"]}>
-        <div className={style["side-section"]}>
-          <SideSection />
+        <div className={style["breadcrum-container"]}>
+          <div className={style["breadcrum-div"]}>
+            <ul className={style["breadcrum"]}>
+              <li>
+                <a href="/#">
+                  <i class={`fas fa-home ${style["home"]}`}></i>
+                </a>
+              </li>
+              <li>
+                <a href="/#">
+                  <i className={`fas fa-caret-right ${style["caret"]}`}></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  className={`${style["list-name"]} ${style["grey-text"]}`}
+                >
+                  CATLOG
+                </a>
+              </li>
+              <li>
+                <a href="/#">
+                  <i className={`fas fa-caret-right ${style["caret"]}`}></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  className={`${style["list-name"]} ${style["grey-text"]}`}
+                >
+                  SOFAS
+                </a>
+              </li>
+              <li>
+                <a href="/#">
+                  <i className={`fas fa-caret-right ${style["caret"]}`}></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  className={`${style["list-name"]} ${style["black-text"]}`}
+                >
+                  BEIGE NUDIE SOFA
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <br />
+        <div className={style["content-container"]}>
+          <div className={style["side-section"]}>
+            <SideSection />
+          </div>
 
-        <div className={style["content-div"]}>
-          <div className={style["details-section"]}>
-            <Details />
-          </div>
-          <div>
-            <Description />
-          </div>
-          <div>
-            <Reviews />
-          </div>
-          <div>
-            <Related />
+          <div className={style["content-div"]}>
+            <div className={style["details-section"]}>
+              <Details />
+            </div>
+            <div>
+              <Description />
+            </div>
+            <div>
+              <Reviews />
+            </div>
+            <div>
+              <Related />
+            </div>
           </div>
         </div>
       </div>
