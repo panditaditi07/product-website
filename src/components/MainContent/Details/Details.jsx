@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import sofa from "../../assets/detailsSofa1.jpeg";
 import style from "./Details.module.scss";
 
-const Details = () => {
+const Details = ({ incrementCount, decrementCount, count, setcartcount }) => {
+  // const setcartcount = (prevstate) => {
+  //   return prevstate + count;
+  // };
+
   return (
     <div className={style["details-section"]} id="details">
       <div className={style["details-container"]}>
@@ -74,10 +78,19 @@ const Details = () => {
           </div>
 
           <div className={style["addtocart-div"]}>
-            <span className={style["dec"]}>—</span>
-            <span className={style["counter"]}>1</span>
-            <span className={style["inc"]}>+</span>
-            <span className={style["addtocart"]}>ADD TO CART</span>
+            <span className={style["dec"]} onClick={decrementCount}>
+              —
+            </span>
+            <span className={style["counter"]}>{count}</span>
+            <span className={style["inc"]} onClick={incrementCount}>
+              +
+            </span>
+            <span
+              className={style["addtocart"]}
+              onClick={() => setcartcount((prevstate) => prevstate + count)}
+            >
+              ADD TO CART
+            </span>
           </div>
         </div>
       </div>

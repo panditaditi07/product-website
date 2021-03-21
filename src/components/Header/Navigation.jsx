@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Navigation.module.scss";
 import logo from "../assets/shopping-cart.png";
-const Navigation = () => {
+const Navigation = ({ count }) => {
   return (
     <div className={style["header"]}>
       <ul className={style["navigation"]}>
@@ -46,7 +46,7 @@ const Navigation = () => {
           </li>
           <li className={style["bag-link"]}>
             <div className={style["cart-count"]}>
-              <span>1</span>
+              <span>{count}</span>
             </div>
             <i
               className={`gg-shopping-bag ${style["icon-link"]} ${style["bag"]}`}

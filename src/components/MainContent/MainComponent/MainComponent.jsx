@@ -6,7 +6,12 @@ import Details from "../Details/Details";
 import Description from "../Description/Description";
 import Reviews from "../Reviews/Reviews";
 import Related from "../Related/Related";
-const MainComponent = () => {
+const MainComponent = ({
+  incrementCount,
+  decrementCount,
+  count,
+  setcartcount,
+}) => {
   return (
     <>
       <div className={style["main-container"]}>
@@ -68,7 +73,12 @@ const MainComponent = () => {
 
           <div className={style["content-div"]}>
             <div className={style["details-section"]}>
-              <Details />
+              <Details
+                incrementCount={incrementCount}
+                decrementCount={decrementCount}
+                count={count}
+                setcartcount={setcartcount}
+              />
             </div>
             <div>
               <Description />
