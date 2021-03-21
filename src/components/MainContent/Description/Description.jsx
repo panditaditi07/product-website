@@ -19,7 +19,7 @@ const Description = () => {
 
   return (
     <>
-      <div className={style["desc-container"]}>
+      <div className={style["desc-container"]} id="description">
         <div className={style["para-div"]}>
           <p className={style["para1"]}>
             At vero eos et accusamus et iusto odio dignissimos ducimus qui

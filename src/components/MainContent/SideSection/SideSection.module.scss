@@ -40,7 +40,7 @@
       padding-top: 30px;
     }
     .icons {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
   .option {
@@ -51,4 +51,11 @@
       color: white;
     }
   }
+}
+
+.hover-effect {
+  background-image: linear-gradient(180deg, #fff06b, #fff06b);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 0.5rem;
 }

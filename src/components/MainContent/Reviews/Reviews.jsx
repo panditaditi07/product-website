@@ -2,11 +2,10 @@ import React from "react";
 import style from "./Reviews.module.scss";
 import talib from "../../assets/talib.jpeg";
 import aditi from "../../assets/aditi.jpeg";
-
 const Reviews = () => {
   return (
     <>
-      <div className={style["reviews-div"]}>
+      <div className={style["reviews-div"]} id="reviews">
         <h2>23 Reviews for Nudie extendable Sofa</h2>
         <div className={style["stars"]}>
           <span>

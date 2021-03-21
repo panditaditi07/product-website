@@ -1,9 +1,10 @@
 import React from "react";
 import sofa from "../../assets/detailsSofa1.jpeg";
 import style from "./Details.module.scss";
+
 const Details = () => {
   return (
-    <div className={style["details-section"]}>
+    <div className={style["details-section"]} id="details">
       <div className={style["details-container"]}>
         <div className={style["sofa"]}>
           <img src={sofa} alt="sofa" />

@@ -10,7 +10,7 @@ import brownchair from "../../assets/brownchair.jpg";
 import bluechair from "../../assets/bluechair.jpg";
 const Related = () => {
   return (
-    <div className={style["related-div"]}>
+    <div className={style["related-div"]} id="related">
       <div className={style["title-div"]}>
         <h2 className={style["title"]}>Related products</h2>
       </div>

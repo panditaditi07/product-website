@@ -36,8 +36,8 @@ $background-color: linear-gradient(180deg, #fff06b, #fff06b);
       text-decoration: none;
       color: black;
       padding: 0.5rem;
+      font-size: 13px;
 
-      // font-family: "Montserrat", sans-serif;
       font-weight: 600;
       &:hover {
         background-image: $background-color;
@@ -53,7 +53,6 @@ $background-color: linear-gradient(180deg, #fff06b, #fff06b);
       position: relative;
       .cart-count {
         font-family: "Lato";
-        font-style: italic;
         position: absolute;
         border-radius: 50%;
         right: -15px;
@@ -62,7 +61,6 @@ $background-color: linear-gradient(180deg, #fff06b, #fff06b);
         background: #fcdc4d;
         height: 21px;
         width: 21px;
-
         text-align: center;
         line-height: 21px;
         z-index: 1;
