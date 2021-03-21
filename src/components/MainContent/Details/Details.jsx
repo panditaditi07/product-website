@@ -3,10 +3,8 @@ import sofa from "../../assets/detailsSofa1.jpeg";
 import style from "./Details.module.scss";
 
 const Details = ({ incrementCount, decrementCount, count, setcartcount }) => {
-  // const setcartcount = (prevstate) => {
-  //   return prevstate + count;
-  // };
-
+  const [rating, setRating] = useState(null);
+  const [hover, setHover] = useState(null);
   return (
     <div className={style["details-section"]} id="details">
       <div className={style["details-container"]}>
@@ -17,21 +15,34 @@ const Details = ({ incrementCount, decrementCount, count, setcartcount }) => {
           <h2>Nudie Extendable Sofa for 3 persons.</h2>
 
           <div className={style["stars"]}>
-            <span>
-              <i className={`fas fa-star ${style["checked-icon"]}`}></i>
-            </span>
-            <span>
-              <i className={`fas fa-star ${style["checked-icon"]}`}></i>
-            </span>
-            <span>
-              <i className={`fas fa-star ${style["checked-icon"]}`}></i>
-            </span>
-            <span>
-              <i className={`fas fa-star ${style["unchecked-icon"]}`}></i>
-            </span>
-            <span>
-              <i className={`fas fa-star ${style["unchecked-icon"]}`}></i>
-            </span>
+            {[...Array(5)].map((star, i) => {
+              const ratingValue = i + 1;
+              return (
+                <label key={ratingValue}>
+                  <input
+                    type="radio"
+                    value={ratingValue}
+                    onClick={() => setRating(ratingValue)}
+                  />
+                  <i
+                    className={`fas fa-star ${
+                      style[
+                        ratingValue <= (hover || rating)
+                          ? "checked-icon"
+                          : "unchecked-icon"
+                      ]
+                    }`}
+                    onMouseEnter={() => {
+                      setHover(ratingValue);
+                    }}
+                    onMouseLeave={() => {
+                      setHover(null);
+                    }}
+                  ></i>
+                </label>
+              );
+            })}
+
             <span className={style["star-likes"]}>(23)</span>
           </div>
 

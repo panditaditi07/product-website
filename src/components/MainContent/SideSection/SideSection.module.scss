@@ -17,18 +17,20 @@
       text-align: right;
       margin: 20px;
       width: 100%;
-      background-image: linear-gradient(180deg, #fff06b, #fff06b);
-      background-repeat: no-repeat;
-      background-position: bottom;
-      background-size: 100% 0.5rem;
     }
     .items-link {
+      text-align: right;
       margin: 20px;
+      width: 100%;
+      &:hover {
+        background-image: linear-gradient(180deg, #fff06b, #fff06b);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% 0.5rem;
+      }
     }
     .link {
       text-decoration: none;
-
-      // font-family: "Montserrat", sans-serif;
       color: black;
       font-weight: 600;
       font-size: 12px;

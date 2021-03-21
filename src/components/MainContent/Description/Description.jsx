@@ -61,15 +61,17 @@ const Description = () => {
         </div>
         <div className={`${!isVideoPlayed ? style["opacity"] : ""}`}></div>
         <div
-          className={`${
-            !isVideoPlayed ? style["play-button"] : style["display-none"]
-          }`}
+          className={`${style["play-button"]}`}
           id="play"
           onClick={() => {
             playVideo();
           }}
         >
-          <i class={`fas fa-play ${style["play-circle"]}`}></i>
+          <i
+            className={`fas fa-play ${
+              style[!isVideoPlayed ? "play-circle" : "display-none"]
+            }`}
+          ></i>
         </div>
         <div className={style["desc-heading-div"]}>
           <h2 className={style["desc-heading"]}>

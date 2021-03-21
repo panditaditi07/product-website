@@ -41,12 +41,16 @@
     }
     .stars {
       padding-top: 10px;
+      input[type="radio"] {
+        display: none;
+      }
+
       .checked-icon {
         color: #fcdc4d;
         font-size: 15px;
       }
       .unchecked-icon {
-        color: rgb(240, 234, 234);
+        color: rgb(190, 190, 190);
         font-size: 15px;
       }
       .star-likes {
