@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import style from "./SideSection.module.scss";
-const SideSection = () => {
+const SideSection = ({
+  detailsSection,
+  descSection,
+  reviewsSection,
+  relatedSection,
+}) => {
   console.log("Scroll pos", window.scrollY);
-
+  // console.log("detail", detailsSection.current.id);
+  // console.log("review", reviewsSection.current.id);
+  // console.log("related", relatedSection.current);
+  // console.log("description", descSection.current);
   const [isDetails, setisDetails] = useState(false);
   const [isDesc, setisDesc] = useState(false);
   const [isRelated, setisRelated] = useState(false);
@@ -40,6 +48,42 @@ const SideSection = () => {
       setisReviews(false);
     }
   };
+  // const listenScrollEvent = () => {
+  //   console.log(detailsSection.current.id === "details");
+  //   if (detailsSection.current.id === "details") {
+  //     setsideTitle("Details");
+  //     setisDetails(true);
+  //     setisDesc(false);
+  //     setisRelated(false);
+  //     setisReviews(false);
+  //   }
+  //   if (descSection.current) {
+  //     console.log(descSection.current.id === "description");
+  //     setsideTitle("Description");
+  //     setisDesc(true);
+  //     setisDetails(false);
+  //     setisRelated(false);
+  //     setisReviews(false);
+  //   }
+  //   if (reviewsSection.current) {
+  //     setsideTitle("Reviews");
+  //     setisDesc(false);
+  //     setisRelated(false);
+  //     setisReviews(true);
+  //     setisDetails(false);
+  //   }
+  //   if (relatedSection.current) {
+  //     setsideTitle("Related");
+  //     setisDesc(false);
+  //     setisRelated(true);
+  //     setisReviews(false);
+  //     setisDetails(false);
+  //   } else {
+  //     setisDesc(false);
+  //     setisRelated(false);
+  //     setisReviews(false);
+  //   }
+  // };
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -48,6 +92,12 @@ const SideSection = () => {
 
     return () => window.removeEventListener("scroll", listenScrollEvent);
   }, []);
+
+  const scrollTo = (ele) => {
+    ele.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className={style["side-section-div"]}>
       <ul className={style["side-content"]}>
@@ -56,51 +106,57 @@ const SideSection = () => {
             style[isDetails ? "hover-effect" : ""]
           }`}
         >
-          <a href="/#details" className={`${style["link"]}`}>
+          <p
+            className={`${style["link"]}`}
+            onClick={() => {
+              scrollTo(detailsSection.current);
+            }}
+          >
             DETAILS
-          </a>
+          </p>
         </li>
-        {/* <li className={style["items-link"]}>
-          <a href="/#description" className={style["link"]}>
-            DESCRIPTION
-          </a>
-        </li>
-        <li className={style["items-link"]}>
-          <a href="/#related" className={style["link"]}>
-            RELATED
-          </a>
-        </li>
-        <li className={style["items-link"]}>
-          <a href="/#reviews" className={style["link"]}>
-            REVIEWS
-          </a>
-        </li> */}
+
         <li
           className={`${style["items-link"]} ${
             style[isDesc ? "hover-effect" : ""]
           }`}
         >
-          <a href="/#description" className={style["link"]}>
+          <p
+            className={style["link"]}
+            onClick={() => {
+              scrollTo(descSection.current);
+            }}
+          >
             DESCRIPTION
-          </a>
+          </p>
         </li>
         <li
           className={`${style["items-link"]} ${
             style[isReviews ? "hover-effect" : ""]
           }`}
         >
-          <a href="/#reviews" className={style["link"]}>
+          <p
+            className={style["link"]}
+            onClick={() => {
+              scrollTo(reviewsSection.current);
+            }}
+          >
             REVIEWS
-          </a>
+          </p>
         </li>
         <li
           className={`${style["items-link"]} ${
             style[isRelated ? "hover-effect" : ""]
           }`}
         >
-          <a href="/#related" className={style["link"]}>
+          <p
+            className={style["link"]}
+            onClick={() => {
+              scrollTo(relatedSection.current);
+            }}
+          >
             RELATED
-          </a>
+          </p>
         </li>
 
         <li className={`${style["items-link"]} ${style["style-icon"]}`}>
@@ -116,3 +172,4 @@ const SideSection = () => {
   );
 };
 export default SideSection;
+// export default forwardRef(SideSection);

@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, forwardRef } from "react";
 import style from "./Description.module.scss";
 import couch from "../../assets/descriptionSofa4.jpg";
 import video from "../../assets/sofaVideo.mp4";
 import couch1 from "../../assets/descSofa7.jpg";
 import couch2 from "../../assets/descSofa6.jpg";
 
-const Description = () => {
+const Description = (props, ref) => {
   const [isVideoPlayed, setisVideoPlayed] = useState(false);
   const vidRef = useRef(null);
   const playVideo = () => {
@@ -20,7 +20,7 @@ const Description = () => {
   return (
     <>
       <section>
-        <div className={style["desc-container"]} id="description">
+        <div className={style["desc-container"]} id="description" ref={ref}>
           <div className={style["para-div"]}>
             <p className={style["para1"]}>
               At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -106,4 +106,5 @@ const Description = () => {
     </>
   );
 };
-export default Description;
+// export default Description;
+export default forwardRef(Description);

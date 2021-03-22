@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import style from "./MainComponent.module.scss";
 // import HorizontalSection from "../HorizontalSection/HorizontalSection";
 import SideSection from "../SideSection/SideSection";
@@ -12,6 +12,10 @@ const MainComponent = ({
   count,
   setcartcount,
 }) => {
+  const detailsSection = useRef();
+  const descSection = useRef();
+  const reviewsSection = useRef();
+  const relatedSection = useRef();
   return (
     <>
       <div className={style["main-container"]}>
@@ -68,12 +72,18 @@ const MainComponent = ({
         <br />
         <div className={style["content-container"]}>
           <div className={style["side-section"]}>
-            <SideSection />
+            <SideSection
+              descSection={descSection}
+              detailsSection={detailsSection}
+              relatedSection={relatedSection}
+              reviewsSection={reviewsSection}
+            />
           </div>
 
           <div className={style["content-div"]}>
             <div className={style["details-section"]}>
               <Details
+                ref={detailsSection}
                 incrementCount={incrementCount}
                 decrementCount={decrementCount}
                 count={count}
@@ -81,13 +91,13 @@ const MainComponent = ({
               />
             </div>
             <div>
-              <Description />
+              <Description ref={descSection} />
             </div>
             <div>
-              <Reviews />
+              <Reviews ref={reviewsSection} />
             </div>
             <div>
-              <Related />
+              <Related ref={relatedSection} />
             </div>
           </div>
         </div>

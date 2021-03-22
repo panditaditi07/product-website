@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import sofa from "../../assets/detailsSofa1.jpeg";
 import style from "./Details.module.scss";
 
-const Details = ({ incrementCount, decrementCount, count, setcartcount }) => {
+const Details = (
+  { incrementCount, decrementCount, count, setcartcount },
+  ref
+) => {
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
   return (
-    <section className={style["details-section"]} id="details">
+    <section className={style["details-section"]} id="details" ref={ref}>
       <div className={style["details-container"]}>
         <div className={style["sofa"]}>
           <img src={sofa} alt="sofa" />
@@ -108,4 +111,5 @@ const Details = ({ incrementCount, decrementCount, count, setcartcount }) => {
     </section>
   );
 };
-export default Details;
+// export default Details;
+export default forwardRef(Details);

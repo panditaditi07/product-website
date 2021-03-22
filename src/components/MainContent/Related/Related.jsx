@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import style from "./Related.module.scss";
 import yellowlamp from "../../assets/yellowlamp.jpeg";
 import purplelamp from "../../assets/purplelamp1.jpg";
@@ -8,9 +8,9 @@ import whitependant from "../../assets/whitependant.jpeg";
 import heartchair from "../../assets/heartchair.jpg";
 import brownchair from "../../assets/brownchair.jpg";
 import bluechair from "../../assets/bluechair.jpg";
-const Related = () => {
+const Related = (props, ref) => {
   return (
-    <section className={style["related-div"]} id="related">
+    <section className={style["related-div"]} id="related" ref={ref}>
       <div className={style["title-div"]}>
         <h2 className={style["title"]}>Related products</h2>
       </div>
@@ -67,4 +67,5 @@ const Related = () => {
     </section>
   );
 };
-export default Related;
+// export default Related;
+export default forwardRef(Related);
