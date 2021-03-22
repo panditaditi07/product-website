@@ -6,7 +6,7 @@ const Details = ({ incrementCount, decrementCount, count, setcartcount }) => {
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
   return (
-    <div className={style["details-section"]} id="details">
+    <section className={style["details-section"]} id="details">
       <div className={style["details-container"]}>
         <div className={style["sofa"]}>
           <img src={sofa} alt="sofa" />
@@ -105,7 +105,7 @@ const Details = ({ incrementCount, decrementCount, count, setcartcount }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Details;

@@ -5,7 +5,7 @@ import aditi from "../../assets/aditi.jpeg";
 const Reviews = () => {
   return (
     <>
-      <div className={style["reviews-div"]} id="reviews">
+      <section className={style["reviews-div"]} id="reviews">
         <h2>23 Reviews for Nudie extendable Sofa</h2>
         <div className={style["stars"]}>
           <span>
@@ -112,7 +112,7 @@ const Reviews = () => {
           </div>
           <p className={style["load"]}>Load more(21)</p>
         </div>
-      </div>
+      </section>
     </>
   );
 };

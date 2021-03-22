@@ -89,7 +89,7 @@ const SideSection = () => {
             style[isReviews ? "hover-effect" : ""]
           }`}
         >
-          <a href="/#related" className={style["link"]}>
+          <a href="/#reviews" className={style["link"]}>
             REVIEWS
           </a>
         </li>
@@ -98,7 +98,7 @@ const SideSection = () => {
             style[isRelated ? "hover-effect" : ""]
           }`}
         >
-          <a href="/#reviews" className={style["link"]}>
+          <a href="/#related" className={style["link"]}>
             RELATED
           </a>
         </li>
