@@ -140,5 +140,5 @@ const Details = (
     </section>
   );
 };
-// export default Details;
+
 export default forwardRef(Details);

@@ -204,3 +204,18 @@ const SideSection = ({
 };
 export default SideSection;
 // export default forwardRef(SideSection);
+
+  // const listenScrollEvent = () => {
+  //   let scrollpos = window.scrollY;
+  //   for (let i = Object.entries(refobj).length - 1; i >= 0; i--) {
+  //     if (Object.entries(refobj)[i][1].current.offsetTop < scrollpos) {
+  //       for (let link of links.current.children) {
+  //         console.log("link-removed", link.classList);
+  //         link.classList.remove(`${style["hover-effect"]}`);
+  //       }
+  //       links.current.children[i].classList.add(`${style["hover-effect"]}`);
+  //       sidename.current.innerText = Object.entries(refobj)[i][0];
+  //       break;
+  //     }
+  //   }
+  // };

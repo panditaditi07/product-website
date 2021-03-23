@@ -116,5 +116,5 @@ const Reviews = (props, ref) => {
     </>
   );
 };
-// export default Reviews;
+
 export default forwardRef(Reviews);

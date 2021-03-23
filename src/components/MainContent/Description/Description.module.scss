@@ -108,7 +108,20 @@
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
 
-      .play-circle {
+      // .play-circle {
+      //   color: #272727;
+      //   font-size: 0.6rem;
+      //   padding: 2rem;
+      //   border-radius: 50%;
+      //   background-image: radial-gradient(
+      //     circle closest-side,
+      //     #ffdd00 50%,
+      //     #ffdd0036 50%
+      //   );
+      //   &:active {
+      //     transform: translateY(5px);
+      //   }
+      i {
         color: #272727;
         font-size: 0.6rem;
         padding: 2rem;

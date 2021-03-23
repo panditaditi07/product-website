@@ -2,25 +2,11 @@ import React, { useEffect, useRef } from "react";
 import style from "./SideSection.module.scss";
 const SideSection = (props) => {
   const { refobj } = props;
-
   const links = useRef(null);
   const sidename = useRef(null);
+  const listenScrollEvent = useRef(() => {});
 
-  // const listenScrollEvent = () => {
-  //   let scrollpos = window.scrollY;
-  //   for (let i = Object.entries(refobj).length - 1; i >= 0; i--) {
-  //     if (Object.entries(refobj)[i][1].current.offsetTop < scrollpos) {
-  //       for (let link of links.current.children) {
-  //         console.log("link-removed", link.classList);
-  //         link.classList.remove(`${style["hover-effect"]}`);
-  //       }
-  //       links.current.children[i].classList.add(`${style["hover-effect"]}`);
-  //       sidename.current.innerText = Object.entries(refobj)[i][0];
-  //       break;
-  //     }
-  //   }
-  // };
-  const listenScrollEvent = () => {
+  listenScrollEvent.current = () => {
     let scrollpos = window.scrollY;
     for (let i = 0; i <= Object.entries(refobj).length - 1; i++) {
       let position =
@@ -39,9 +25,10 @@ const SideSection = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+    window.addEventListener("scroll", listenScrollEvent.current);
 
-    return () => window.removeEventListener("scroll", listenScrollEvent);
+    return () =>
+      window.removeEventListener("scroll", listenScrollEvent.current);
   }, []);
 
   const scrollTo = (ele) => {

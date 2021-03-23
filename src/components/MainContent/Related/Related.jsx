@@ -67,5 +67,5 @@ const Related = (props, ref) => {
     </section>
   );
 };
-// export default Related;
+
 export default forwardRef(Related);

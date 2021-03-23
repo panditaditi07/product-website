@@ -6,8 +6,9 @@ import couch1 from "../../assets/descSofa7.jpg";
 import couch2 from "../../assets/descSofa6.jpg";
 
 const Description = (props, ref) => {
-  const [isVideoPlayed, setisVideoPlayed] = useState(false);
   const vidRef = useRef(null);
+
+  const [isVideoPlayed, setisVideoPlayed] = useState(false);
   const playVideo = () => {
     vidRef.current.play();
     setisVideoPlayed(!isVideoPlayed);
@@ -51,7 +52,9 @@ const Description = (props, ref) => {
         <div className={style["desc-container-2"]}>
           <div
             className={style["video-div"]}
-            onClick={() => (isVideoPlayed ? pauseVideo() : playVideo())}
+            onClick={() => {
+              return isVideoPlayed ? pauseVideo() : playVideo();
+            }}
           >
             <video
               ref={vidRef}
@@ -62,15 +65,14 @@ const Description = (props, ref) => {
           </div>
           <div className={!isVideoPlayed ? style["opacity"] : ""}></div>
           <div
-            className={`${style["play-button"]}`}
-            id="play"
+            className={!isVideoPlayed ? style["play-button"] : ""}
             onClick={() => {
               playVideo();
             }}
           >
             <i
               className={`fas fa-play ${
-                !isVideoPlayed ? style["play-circle"] : style["display-none"]
+                isVideoPlayed ? style["display-none"] : ""
               }`}
             ></i>
           </div>
@@ -106,5 +108,5 @@ const Description = (props, ref) => {
     </>
   );
 };
-// export default Description;
+
 export default forwardRef(Description);
