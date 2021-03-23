@@ -25,9 +25,15 @@ const Footer = () => {
             <img src={logo} alt="logo" className={style["image"]} />
           </div>
           <div className={style["icons-section"]}>
-            <i className={`fab fa-facebook-f ${style["icons"]}`}></i>
-            <i className={`fab fa-twitter ${style["icons"]}`}></i>
-            <i className={`fab fa-pinterest ${style["icons"]}`}></i>
+            <a href="/#" className={style["icon-link"]}>
+              <i className={`fab fa-facebook-f ${style["icons"]}`}></i>
+            </a>
+            <a href="/#" className={style["icon-link"]}>
+              <i className={`fab fa-twitter ${style["icons"]}`}></i>
+            </a>
+            <a href="/#" className={style["icon-link"]}>
+              <i className={`fab fa-pinterest ${style["icons"]}`}></i>
+            </a>
           </div>
         </div>
       </div>

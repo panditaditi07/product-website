@@ -19,8 +19,8 @@ const Description = (props, ref) => {
 
   return (
     <>
-      <section>
-        <div className={style["desc-container"]} id="description" ref={ref}>
+      <section className={style["description-container"]} ref={ref}>
+        <div className={style["desc-container-1"]} id="description">
           <div className={style["para-div"]}>
             <p className={style["para1"]}>
               At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -60,7 +60,7 @@ const Description = (props, ref) => {
               type="video/mp4"
             />
           </div>
-          <div className={`${!isVideoPlayed ? style["opacity"] : ""}`}></div>
+          <div className={!isVideoPlayed ? style["opacity"] : ""}></div>
           <div
             className={`${style["play-button"]}`}
             id="play"
@@ -69,8 +69,8 @@ const Description = (props, ref) => {
             }}
           >
             <i
-              className={`fas fa-play ${
-                style[!isVideoPlayed ? "play-circle" : "display-none"]
+              className={`fas fa-play${
+                !isVideoPlayed ? style["play-circle"] : style["display-none"]
               }`}
             ></i>
           </div>

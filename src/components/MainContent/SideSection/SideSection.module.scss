@@ -19,6 +19,11 @@
       width: 100%;
       cursor: pointer;
     }
+    .icons-link {
+      text-align: right;
+      margin: 20px;
+      width: 100%;
+    }
     .items-link {
       text-align: right;
       margin: 20px;
@@ -41,10 +46,14 @@
       width: 100px;
       display: flex;
       justify-content: space-between;
-      padding-top: 30px;
+      padding-top: 20px;
     }
     .icons {
       font-size: 15px;
+      cursor: pointer;
+    }
+    .icon-link {
+      color: black;
     }
   }
   .option {

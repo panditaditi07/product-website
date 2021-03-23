@@ -12,10 +12,17 @@ const MainComponent = ({
   count,
   setcartcount,
 }) => {
-  const detailsSection = useRef();
-  const descSection = useRef();
-  const reviewsSection = useRef();
-  const relatedSection = useRef();
+  const details = useRef();
+  const description = useRef();
+  const reviews = useRef();
+  const related = useRef();
+
+  const refobj = {
+    Details: details,
+    Description: description,
+    Reviews: reviews,
+    Related: related,
+  };
   return (
     <>
       <div className={style["main-container"]}>
@@ -24,7 +31,7 @@ const MainComponent = ({
             <ul className={style["breadcrum"]}>
               <li>
                 <a href="/#">
-                  <i class={`fas fa-home ${style["home"]}`}></i>
+                  <i className={`fas fa-home ${style["home"]}`}></i>
                 </a>
               </li>
               <li>
@@ -72,18 +79,13 @@ const MainComponent = ({
         <br />
         <div className={style["content-container"]}>
           <div className={style["side-section"]}>
-            <SideSection
-              descSection={descSection}
-              detailsSection={detailsSection}
-              relatedSection={relatedSection}
-              reviewsSection={reviewsSection}
-            />
+            <SideSection refobj={refobj} />
           </div>
 
           <div className={style["content-div"]}>
             <div className={style["details-section"]}>
               <Details
-                ref={detailsSection}
+                ref={details}
                 incrementCount={incrementCount}
                 decrementCount={decrementCount}
                 count={count}
@@ -91,13 +93,13 @@ const MainComponent = ({
               />
             </div>
             <div>
-              <Description ref={descSection} />
+              <Description ref={description} />
             </div>
             <div>
-              <Reviews ref={reviewsSection} />
+              <Reviews ref={reviews} />
             </div>
             <div>
-              <Related ref={relatedSection} />
+              <Related ref={related} />
             </div>
           </div>
         </div>

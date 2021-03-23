@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, forwardRef, useRef } from "react";
 import sofa from "../../assets/detailsSofa1.jpeg";
 import style from "./Details.module.scss";
 
@@ -6,8 +6,15 @@ const Details = (
   { incrementCount, decrementCount, count, setcartcount },
   ref
 ) => {
+  const color = useRef(null);
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
+  const selectColor = (id) => {
+    for (let c of color.current.children) {
+      c.children[0].classList.remove("fa-check");
+    }
+    color.current.children[Number(id)].children[0].classList.add("fa-check");
+  };
   return (
     <section className={style["details-section"]} id="details" ref={ref}>
       <div className={style["details-container"]}>
@@ -82,11 +89,33 @@ const Details = (
 
           <div className={style["select-color"]}>
             <p className={style["color"]}>COLOR:</p>
-            <div className={style["colors-div"]}>
-              <span className={style["brown"]}></span>
-              <span className={style["black"]}></span>
-              <span className={style["green"]}>
-                <i class={`fas fa-check ${style["check"]}`}></i>
+            <div className={style["colors-div"]} ref={color}>
+              <span
+                id="0"
+                className={style["brown"]}
+                onClick={(event) => {
+                  selectColor(event.target.id);
+                }}
+              >
+                <i className={`fas ${style["check"]}`}></i>
+              </span>
+              <span
+                id="1"
+                className={style["black"]}
+                onClick={(event) => {
+                  selectColor(event.target.id);
+                }}
+              >
+                <i className={`fas ${style["check"]}`}></i>
+              </span>
+              <span
+                id="2"
+                className={style["green"]}
+                onClick={(event) => {
+                  selectColor(event.target.id);
+                }}
+              >
+                <i className={`fas fa-check ${style["check"]}`}></i>
               </span>
             </div>
           </div>
