@@ -69,7 +69,7 @@ const Description = (props, ref) => {
             }}
           >
             <i
-              className={`fas fa-play${
+              className={`fas fa-play ${
                 !isVideoPlayed ? style["play-circle"] : style["display-none"]
               }`}
             ></i>
