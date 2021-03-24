@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/product-website/static/css/main.21f266dd.chunk.css",
+    "main.js": "/product-website/static/js/main.67902a84.chunk.js",
+    "main.js.map": "/product-website/static/js/main.67902a84.chunk.js.map",
+    "runtime-main.js": "/product-website/static/js/runtime-main.3f4edf18.js",
+    "runtime-main.js.map": "/product-website/static/js/runtime-main.3f4edf18.js.map",
+    "static/js/2.59997411.chunk.js": "/product-website/static/js/2.59997411.chunk.js",
+    "static/js/2.59997411.chunk.js.map": "/product-website/static/js/2.59997411.chunk.js.map",
+    "static/js/3.1cb26a44.chunk.js": "/product-website/static/js/3.1cb26a44.chunk.js",
+    "static/js/3.1cb26a44.chunk.js.map": "/product-website/static/js/3.1cb26a44.chunk.js.map",
+    "index.html": "/product-website/index.html",
+    "static/css/main.21f266dd.chunk.css.map": "/product-website/static/css/main.21f266dd.chunk.css.map",
+    "static/js/2.59997411.chunk.js.LICENSE.txt": "/product-website/static/js/2.59997411.chunk.js.LICENSE.txt",
+    "static/media/aditi.0c6cdc3d.jpeg": "/product-website/static/media/aditi.0c6cdc3d.jpeg",
+    "static/media/blackpendant4.f822b0ba.jpeg": "/product-website/static/media/blackpendant4.f822b0ba.jpeg",
+    "static/media/bluechair.2cd32d35.jpg": "/product-website/static/media/bluechair.2cd32d35.jpg",
+    "static/media/brownchair.e2417e7c.jpg": "/product-website/static/media/brownchair.e2417e7c.jpg",
+    "static/media/descSofa6.ffbf1ac7.jpg": "/product-website/static/media/descSofa6.ffbf1ac7.jpg",
+    "static/media/descSofa7.b4b7d56e.jpg": "/product-website/static/media/descSofa7.b4b7d56e.jpg",
+    "static/media/descriptionSofa4.8544d34a.jpg": "/product-website/static/media/descriptionSofa4.8544d34a.jpg",
+    "static/media/detailsSofa1.f3794ade.jpeg": "/product-website/static/media/detailsSofa1.f3794ade.jpeg",
+    "static/media/drawer.a99feba3.jpg": "/product-website/static/media/drawer.a99feba3.jpg",
+    "static/media/shopping-cart.2739bbf0.png": "/product-website/static/media/shopping-cart.2739bbf0.png",
+    "static/media/sofaVideo.576fde25.mp4": "/product-website/static/media/sofaVideo.576fde25.mp4",
+    "static/media/talib.b182f64c.jpeg": "/product-website/static/media/talib.b182f64c.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f4edf18.js",
+    "static/js/2.59997411.chunk.js",
+    "static/css/main.21f266dd.chunk.css",
+    "static/js/main.67902a84.chunk.js"
+  ]
+}
