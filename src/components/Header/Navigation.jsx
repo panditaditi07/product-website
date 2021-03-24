@@ -53,6 +53,7 @@ const Navigation = ({ count }) => {
             ></i>
           </li>
         </div>
+        
       </ul>
     </div>
   );
